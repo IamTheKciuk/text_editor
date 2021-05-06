@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Editor</title>
+
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- icons -->
+        <script
+            src="https://kit.fontawesome.com/2891518145.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar">
+            <p>text.<span>editor</span></p>
+        </nav>
+
+        <!-- text editor section -->
+        <section class="editor center">
+            <!-- command buttons -->
+            <div class="btn-container">
+                <ul class="command-list">
+                    <!-- bold -->
+                    <li class="command-item">
+                        <button
+                            type="button"
+                            class="command-btn"
+                            data-command="bold"
+                        >
+                            <i class="fas fa-bold"></i>
+                        </button>
+                    </li>
+
+                    <!-- italic -->
+                    <li class="command-item">
+                        <button
+                            type="button"
+                            class="command-btn"
+                            data-command="italic"
+                        >
+                            <i class="fas fa-italic"></i>
+                        </button>
+                    </li>
+
+                    <!-- unordered list -->
+                    <li class="command-item">
+                        <button
+                            type="button"
+                            class="command-btn"
+                            data-command="insertUnorderedList"
+                        >
+                            <i class="fas fa-list-ul"></i>
+                        </button>
+                    </li>
+
+                    <!-- ordered list -->
+                    <li class="command-item">
+                        <button
+                            type="button"
+                            class="command-btn"
+                            data-command="insertOrderedList"
+                        >
+                            <i class="fas fa-list-ol"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- load file button -->
+                <button type="button" class="button" id="load-file-btn">
+                    LOAD FILE
+                </button>
+
+                <!-- hidden file input -->
+                <input type="file" id="file-input-hidden" />
+            </div>
+
+            <!-- text field -->
+            <div contenteditable class="text-field" id="text-field"></div>
+
+            <!-- save file btn and filename input field -->
+            <div class="save-btn-container">
+                <input
+                    type="text"
+                    id="file-name"
+                    placeholder="filename"
+                    maxlength="25"
+                />
+                <button type="button" class="button" id="save-button">
+                    SAVE FILE
+                </button>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
